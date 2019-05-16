@@ -1,0 +1,45 @@
+package bank;
+import java.util.Scanner;
+
+public class Bank {
+
+    
+    public static void main(String[] args) {
+        int amount = 5000,inp,am;
+        Scanner input = new Scanner(System.in);
+       
+        System.out.println("Welcome to Simunca bank limited:-\n 1->Check Amount \n 2->Deposit \n 3->Withdraw \n 0->Exit \n\n");
+        
+        int i;
+        for(i=1;i>0;i++){
+            System.out.println("INSTRUCTION: ");
+           inp = input.nextInt();
+           if(inp == 1){
+               System.out.println("You have R" + amount);   
+           }
+           if(inp == 2){
+               System.out.println("Enter a amount:-");
+               am = input.nextInt();
+               amount += am;
+               System.out.println("You have Successfuly deposited R" + am);
+           } else {
+           }
+           if(inp == 3){
+               System.out.println("How much you need?");
+               am = input.nextInt();
+               if(am <= amount){
+                   amount -= am;
+                   System.out.println("Success!! Take your money");
+               }else{
+                   System.out.println("You dont have enough amount !!"); 
+               }
+           }
+           if(inp == 0){
+               System.out.println("Thanks for coming");
+               i= -1;
+           }
+        }
+        
+    }
+    
+}
